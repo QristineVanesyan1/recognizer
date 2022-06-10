@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: () {
             Navigator.of(context).pushNamed('/homeScreen/camera');
           },
-          type: MenuItemType.a,
+          type: MenuItemType.camera,
         ),
         const MenuItemWidget(
           type: MenuItemType.b,

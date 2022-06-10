@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-enum MenuItemType { a, b, c, d }
+enum MenuItemType { camera, b, c, d }
 
 extension MenuItemTypeExtension on MenuItemType {
   String getPath() {
     switch (this) {
-      case MenuItemType.a:
+      case MenuItemType.camera:
         return 'assets/images/Vector 3.png';
       case MenuItemType.b:
         return 'assets/images/Vector 4.png';
@@ -18,7 +18,7 @@ extension MenuItemTypeExtension on MenuItemType {
 
   Color getBackgroundColor() {
     switch (this) {
-      case MenuItemType.a:
+      case MenuItemType.camera:
         return const Color(0xFF3E8469);
       case MenuItemType.b:
         return const Color(0xFF69B09C);
@@ -31,7 +31,7 @@ extension MenuItemTypeExtension on MenuItemType {
 
   String getTitle() {
     switch (this) {
-      case MenuItemType.a:
+      case MenuItemType.camera:
         return 'Camera';
       case MenuItemType.b:
         return 'The  produces';
@@ -44,7 +44,7 @@ extension MenuItemTypeExtension on MenuItemType {
 
   IconData getIcon() {
     switch (this) {
-      case MenuItemType.a:
+      case MenuItemType.camera:
         return Icons.camera;
       case MenuItemType.b:
         return Icons.u_turn_left;

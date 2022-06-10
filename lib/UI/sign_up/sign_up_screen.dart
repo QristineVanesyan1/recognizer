@@ -22,6 +22,7 @@ class RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Theme.of(context).backgroundColor,
         body: Stack(
           children: [
@@ -36,45 +37,9 @@ class RegistrationScreenState extends State<RegistrationScreen> {
                   _renderTitle(),
                   _renderSubtitle(),
                   ...renderTextFields(),
-
                   renderForgetWidget(),
                   renderButton(),
                   renderAccount(),
-                  // Row(children: <Widget>[
-                  //   Expanded(
-                  //       child: Divider(
-                  //     height: 1,
-                  //     thickness: 1,
-                  //     color: Colors.white.withOpacity(0.7),
-                  //   )),
-                  //   Padding(
-                  //     padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                  //     child: Text(
-                  //       "OR",
-                  //       style: TextStyle(
-                  //           fontSize: 18,
-                  //           fontWeight: FontWeight.w400,
-                  //           color: Colors.white.withOpacity(0.7)),
-                  //     ),
-                  //   ),
-                  //   Expanded(
-                  //       child: Divider(
-                  //     height: 1,
-                  //     thickness: 1,
-                  //     color: Colors.white.withOpacity(0.7),
-                  //   )),
-                  // ]),
-                  // Container(
-                  //   height: 50,
-                  //   width: double.infinity,
-                  //   decoration: BoxDecoration(
-                  //       color: Color(0xFF7C9A92).withOpacity(0.5),
-                  //       borderRadius: BorderRadius.all(Radius.circular(10))),
-                  //   child: Center(
-                  //     child: Text('Continue with Google',
-                  //         style: Theme.of(context).textTheme.headline4),
-                  //   ),
-                  // )
                 ],
               ),
             ),
@@ -116,7 +81,7 @@ class RegistrationScreenState extends State<RegistrationScreen> {
   }
 
   void _navigateTo() {
-    Navigator.of(context).pushNamed(navigateTo);
+    Navigator.of(context).pushReplacementNamed(navigateTo);
   }
 
   Widget renderAccount() {

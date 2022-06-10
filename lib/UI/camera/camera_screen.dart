@@ -31,10 +31,10 @@ class _CameraScreenState extends State<CameraScreen> {
         builder:
             (BuildContext context, AsyncSnapshot<CameraController?> snapshot) {
           return snapshot.hasError || controller == null
-              ? Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
+              ? const Center(
+                  child: CircularProgressIndicator(
+                    color: Color(0xFF3E8469),
+                  ),
                 )
               : CameraPreview(snapshot.data!);
         });
