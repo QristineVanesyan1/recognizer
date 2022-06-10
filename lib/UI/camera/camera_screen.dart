@@ -18,8 +18,8 @@ class _CameraScreenState extends State<CameraScreen> {
   }
 
   Future<CameraController?> _calculation() async {
-    var _cameras = await availableCameras();
-    controller = CameraController(_cameras.first, ResolutionPreset.max);
+    var cameras = await availableCameras();
+    controller = CameraController(cameras.first, ResolutionPreset.max);
     await controller?.initialize();
     return controller;
   }

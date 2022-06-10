@@ -19,8 +19,4 @@ class _SignInScreenState extends RegistrationScreenState {
   String get messageTxt => 'Don’t have an account? ';
   @override
   String get navigateTo => '/signUp';
-  @override
-  Widget build(BuildContext context) {
-    return super.build(context);
-  }
 }

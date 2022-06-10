@@ -3,7 +3,6 @@ import 'package:recognizer/UI/camera/camera_screen.dart';
 import 'package:recognizer/UI/home/home_screen.dart';
 import 'package:recognizer/UI/shared_widgets/registration_screen.dart';
 import 'package:recognizer/UI/sign_in/sign_in_screen.dart';
-import 'package:recognizer/UI/sign_up/sign_up_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'AlegreyaSans',
-        backgroundColor: Color(0xFF283434),
+        backgroundColor: const Color(0xFF283434),
         textTheme: TextTheme(
           headline1: const TextStyle(
             fontSize: 30,

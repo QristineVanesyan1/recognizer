@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:recognizer/UI/shared_widgets/background_image.dart';
 import 'package:recognizer/UI/shared_widgets/button.dart';
@@ -130,9 +129,6 @@ class RegistrationScreenState extends State<RegistrationScreen> {
           style: Theme.of(context).textTheme.headline4,
           children: <TextSpan>[
             TextSpan(
-                onEnter: (val) {
-                  print("object");
-                },
                 text: 'Sign Up',
                 style: Theme.of(context)
                     .textTheme
@@ -145,7 +141,7 @@ class RegistrationScreenState extends State<RegistrationScreen> {
   }
 
   List<Widget> renderTextFields() {
-    return [
+    return const [
       TextFieldWidget(hintText: 'Email Address'),
       TextFieldWidget(
         hintText: "Password",

@@ -14,7 +14,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
     return Container(
       height: 60,
       width: double.infinity,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           color: Color(0xFF7C9A92),
           borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Center(

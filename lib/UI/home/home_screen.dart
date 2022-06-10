@@ -1,9 +1,4 @@
-import 'dart:ui';
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:recognizer/UI/home/widgets/menu_item_widget.dart';
 import 'package:recognizer/utils/extensions/menu_item_extension.dart';
 
@@ -22,13 +17,13 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           type: MenuItemType.a,
         ),
-        MenuItemWidget(
+        const MenuItemWidget(
           type: MenuItemType.b,
         ),
-        MenuItemWidget(
+        const MenuItemWidget(
           type: MenuItemType.c,
         ),
-        MenuItemWidget(
+        const MenuItemWidget(
           type: MenuItemType.d,
         ),
       ];
@@ -48,9 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: Theme.of(context).textTheme.headline1,
                 ),
                 GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisExtent: 118,
                       crossAxisSpacing: 5),

@@ -23,7 +23,7 @@ class _SignUpScreenState extends RegistrationScreenState {
   String get navigateTo => '/signIn';
   @override
   List<Widget> renderTextFields() {
-    return [
+    return const [
       TextFieldWidget(hintText: 'Name'),
       TextFieldWidget(hintText: 'Email Address'),
       TextFieldWidget(
@@ -31,10 +31,5 @@ class _SignUpScreenState extends RegistrationScreenState {
         obscureText: false,
       ),
     ];
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return super.build(context);
   }
 }

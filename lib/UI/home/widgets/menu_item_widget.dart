@@ -19,7 +19,7 @@ class MenuItemWidget extends StatelessWidget {
               height: 115,
               decoration: BoxDecoration(
                   color: type.getBackgroundColor(),
-                  borderRadius: BorderRadius.all(Radius.circular(21.0))),
+                  borderRadius: const BorderRadius.all(Radius.circular(21.0))),
               child: Image.asset(type.getPath())),
           Positioned(
               left: 20,
