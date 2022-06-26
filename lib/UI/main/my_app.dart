@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:recognizer/UI/camera/camera_screen.dart';
 import 'package:recognizer/UI/home/home_screen.dart';
+import 'package:recognizer/UI/navigator/app_navigator.dart';
 import 'package:recognizer/UI/shared_widgets/registration_screen.dart';
 import 'package:recognizer/UI/sign_in/sign_in_screen.dart';
 
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Recognizer',
       theme: ThemeData(
         fontFamily: 'AlegreyaSans',
@@ -38,14 +40,8 @@ class MyApp extends StatelessWidget {
           headline6: const TextStyle(fontSize: 14.0, color: Color(0xFFBEC2C2)),
         ),
       ),
-      initialRoute: '/',
-      routes: {
-        '/signUp': (context) => const SignUpScreen(),
-        '/signIn': (context) => const SignInScreen(),
-        '/homeScreen': (context) => const HomeScreen(),
-        '/homeScreen/camera': (context) => const CameraScreen(),
-      },
-      home: const SignUpScreen(),
+      routeInformationParser: AppNavigator.appRouteInformatonParser,
+      routerDelegate: AppNavigator.appRouteDelegate,
     );
   }
 }
