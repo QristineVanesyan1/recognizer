@@ -3,6 +3,7 @@ import 'package:recognizer/UI/shared_widgets/background_image.dart';
 import 'package:recognizer/UI/shared_widgets/button.dart';
 import 'package:recognizer/UI/shared_widgets/logo.dart';
 import 'package:recognizer/UI/shared_widgets/text_field_widget.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 abstract class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -26,8 +27,8 @@ class RegistrationScreenState extends State<RegistrationScreen> {
         backgroundColor: Theme.of(context).backgroundColor,
         body: Stack(
           children: [
-            const BackgroundImage(),
-            Padding(
+            Container(child: const BackgroundImage()),
+            Container(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
